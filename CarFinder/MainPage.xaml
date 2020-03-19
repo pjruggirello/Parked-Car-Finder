@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="CarFinder.MainPage" BackgroundColor="#0B63C5">
     <StackLayout>
         <Image Source="carFinder.png" HeightRequest="300"/>
-        <Button Text="My Car"  />
+        <Button Text="My Car" />
         <Button Text="Friend's Car" />
         <Button Text="Who Can See My Car" />
         <Label Text="CarFinder®" HorizontalOptions="Center" VerticalOptions="End" />

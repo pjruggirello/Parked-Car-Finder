@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="CarFinder.MainPage" BackgroundColor="#0B63C5">
     <StackLayout>
-        <Image Source="carFinder.png" HeightRequest="300"/>
+        <!--<Image Source="carFinder.png" HeightRequest="300"/>-->
+        <Image Source="https://maps.googleapis.com/maps/api/staticmap?center=41.796636,-72.777577&amp;zoom=16&amp;size=600x600&amp;key=AIzaSyCM35yVDMoWOYdyPkBc1r4iXieivhP4PqA" />
         <Button Text="My Car" />
         <Button Text="Friend's Car" />
         <Button Text="Who Can See My Car" />

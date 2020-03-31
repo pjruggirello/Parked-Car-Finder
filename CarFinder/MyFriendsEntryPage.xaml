@@ -3,67 +3,12 @@
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Welcome to the My Friends Page!" />
-
-            <Button Text="Back Home"
-                    Clicked="Can See" 
-                    HorizontalOptions="Start" 
-                    VerticalOptions="Fill" 
-                    BackgroundColor="White"
-                    HeightRequest="65"
-                    WidthRequest="65"
-                    BorderColor="Black"
-                    CornerRadius="20"
-                    BorderWidth="2"
-            />
-
-            <Label>
-            </Label>
-
-            <Label Text="Friend #1" 
-                   HorizontalOptions="Left" 
-                   FontAttributes="Bold" 
-            />
-            <Button Text="Can't See" 
-                    Clicked="Can See" 
-                    HorizontalOptions="CenterAndExpand" 
-                    VerticalOptions="Fill" 
-                    BackgroundColor="LightBlue"
-                    WidthRequest="200"
-                    BorderColor="Black"
-                    CornerRadius="20"
-                    BorderWidth="2"
-            />
-
-            <Label Text="Friend #2" 
-                   HorizontalOptions="Left"
-                   FontAttributes="Bold" 
-            />
-            <Button Text="Can't See" 
-                    Clicked="Can See" 
-                    HorizontalOptions="CenterAndExpand" 
-                    VerticalOptions="Fill" 
-                    BackgroundColor="LightBlue"
-                    WidthRequest="200"
-                    BorderColor="Black"
-                    CornerRadius="20"
-                    BorderWidth="2"
-            />
-
-            <Label Text="Friend #3"  
-                    HorizontalOptions="Left" 
-                    FontAttributes="Bold"
-            />
-            <Button Text="Can't See" 
-                    Clicked="Can See" 
-                    HorizontalOptions="CenterAndExpand" 
-                    VerticalOptions="Fill" 
-                    BackgroundColor="LightBlue"
-                    WidthRequest="200"
-                    BorderColor="Black"
-                    CornerRadius="20"
-                    BorderWidth="2"
-            />
-            
+            <Label Text="Friend #1" HorizontalOptions="Start"/>
+            <Button Text="Can't See" HorizontalOptions="End" VerticalOptions="Center"/>
+            <Label Text="Friend #2" HorizontalOptions="Start"/>
+            <Button Text="Can't See" HorizontalOptions="End" VerticalOptions="Center"/>
+            <Label Text="Friend #3" HorizontalOptions="Start"/>
+            <Button Text="Can't See" HorizontalOptions="End" VerticalOptions="Center"/>
             <Label Text="CarFinder®" HorizontalOptions="Center" VerticalOptions="End" />
         </StackLayout>
     </ContentPage.Content>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="CarFinder.MyFriendsEntryPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome to the My Friends Page!" />
+            <Label Text="Friend #1" HorizontalOptions="Left"/>
+            <Button Text="Can't See" Clicked="Can See" HorizontalOptions="Right" VerticalOptions="Center"/>
+            <Label Text="Friend #2" HorizontalOptions="Left"/>
+            <Button Text="Can't See" Clicked="Can See" HorizontalOptions="Right" VerticalOptions="Center"/>
+            <Label Text="Friend #3" HorizontalOptions="Left"/>
+            <Button Text="Can't See" Clicked="Can See" HorizontalOptions="Right" VerticalOptions="Center"/>
+            <Label Text="CarFinder®" HorizontalOptions="Center" VerticalOptions="End" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

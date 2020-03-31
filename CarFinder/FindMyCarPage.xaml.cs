@@ -1,6 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-
+using System.ComponentModel;
 using Xamarin.Forms;
 
 namespace CarFinder
@@ -10,6 +9,10 @@ namespace CarFinder
         public FindMyCarPage()
         {
             InitializeComponent();
+        }
+        private async void FindMyCarClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new MainPage());
         }
     }
 }

@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace CarFinder
@@ -17,5 +13,24 @@ namespace CarFinder
         {
             InitializeComponent();
         }
+
+        private async void FindMyCarClicked(object sender, EventArgs e)
+        { 
+            await Navigation.PushAsync(new FindMyCarPage());
+        }
+
+        private async void FriendsCarClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new MyFriendsEntryPage());
+        }
+
+        //  private async void WhoCanSeeClicked(object sender, EventArgs e)
+        // {
+        //
+        //   var WhoCanSeePage = new (WhoCanSeeClickedPage);
+        //     Navigation.PushAsync(WhoCanSeePage);
+        // }
+
+
     }
 }

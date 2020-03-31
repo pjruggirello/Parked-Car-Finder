@@ -15,17 +15,13 @@ namespace CarFinder
         }
 
         private async void FindMyCarClicked(object sender, EventArgs e)
-        {
-
-            var MyCarPage = new FindMyCarPage();
-            await Navigation.PushAsync(MyCarPage);
+        { 
+            await Navigation.PushAsync(new FindMyCarPage());
         }
 
         private async void FriendsCarClicked(object sender, EventArgs e)
         {
-
-            var FriendsCarPage = new MyFriendsEntryPage();
-            await Navigation.PushAsync(FriendsCarPage);
+            await Navigation.PushAsync(new MyFriendsEntryPage());
         }
 
         //  private async void WhoCanSeeClicked(object sender, EventArgs e)

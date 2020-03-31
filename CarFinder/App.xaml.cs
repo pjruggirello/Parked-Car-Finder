@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿
+using Xamarin.Forms;
 
 namespace CarFinder
 {
@@ -6,9 +7,9 @@ namespace CarFinder
     {
         public App()
         {
-            InitializeComponent();
 
-            MainPage = new MainPage();
+            InitializeComponent();
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()

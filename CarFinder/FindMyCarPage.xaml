@@ -3,6 +3,7 @@
     <ContentPage.Content>
         <StackLayout>
             <Image Source="https://maps.googleapis.com/maps/api/staticmap?center=41.796636,-72.777577&amp;zoom=16&amp;size=600x600&amp;key=AIzaSyCM35yVDMoWOYdyPkBc1r4iXieivhP4PqA" />
+            <Button Text="Home" Clicked="FindMyCarClicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

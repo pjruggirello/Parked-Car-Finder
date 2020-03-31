@@ -10,5 +10,9 @@ namespace CarFinder
         {
             InitializeComponent();
         }
+        private async void FindMyCarClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new MainPage());
+        }
     }
 }

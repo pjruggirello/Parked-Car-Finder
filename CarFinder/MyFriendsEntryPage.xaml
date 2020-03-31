@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="CarFinder.MyFriendsEntryPage">
     <ContentPage.Content>
         <StackLayout>
+            <Button Text="Home" Clicked="FriendsCarClicked"/>
             <Label Text="Welcome to the My Friends Page!" />
         </StackLayout>
     </ContentPage.Content>

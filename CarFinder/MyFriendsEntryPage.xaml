@@ -1,15 +1,27 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="CarFinder.MyFriendsEntryPage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to the My Friends Page!" />
-            <Label Text="Friend #1" HorizontalOptions="Start"/>
-            <Button Text="Can't See" HorizontalOptions="End" VerticalOptions="Center"/>
-            <Label Text="Friend #2" HorizontalOptions="Start"/>
-            <Button Text="Can't See" HorizontalOptions="End" VerticalOptions="Center"/>
-            <Label Text="Friend #3" HorizontalOptions="Start"/>
-            <Button Text="Can't See" HorizontalOptions="End" VerticalOptions="Center"/>
-            <Label Text="CarFinder®" HorizontalOptions="Center" VerticalOptions="End" />
-        </StackLayout>
-    </ContentPage.Content>
+    <TableView Intent="Settings">
+        <TableRoot>
+            <TableSection Title="Who Can See My Car">
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Friend #1" HorizontalOptions="Start"/>
+                        <Button Text="Can't See" HorizontalOptions="End" VerticalOptions="Center"/>
+                    </StackLayout>
+                </ViewCell>
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Friend #2" HorizontalOptions="Start"/>
+                        <Button Text="Can't See" HorizontalOptions="End" VerticalOptions="Center"/>
+                    </StackLayout>
+                </ViewCell>
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Friend #3" HorizontalOptions="Start"/>
+                        <Button Text="Can't See" HorizontalOptions="End" VerticalOptions="Center"/>
+                    </StackLayout>
+                </ViewCell>
+            </TableSection>
+        </TableRoot>
+    </TableView>
 </ContentPage>

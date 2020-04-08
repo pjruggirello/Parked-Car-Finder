@@ -6,13 +6,14 @@ namespace CarFinder
 {
     public partial class FindMyCarPage : ContentPage
     {
+        StackLayout stack;
         public FindMyCarPage()
         {
             InitializeComponent();
         }
         private async void FindMyCarClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new MainPage());
+            await Navigation.PopAsync();
         }
     }
 }

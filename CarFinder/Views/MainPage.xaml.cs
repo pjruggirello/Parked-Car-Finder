@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using CarFinder.Views;
 using Xamarin.Forms;
 
 namespace CarFinder

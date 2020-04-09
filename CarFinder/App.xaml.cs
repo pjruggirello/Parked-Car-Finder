@@ -1,4 +1,8 @@
-﻿
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using CarFinder.Views;
 using Xamarin.Forms;
 
 namespace CarFinder
@@ -9,7 +13,9 @@ namespace CarFinder
         {
 
             InitializeComponent();
-            MainPage = new NavigationPage(new MainPage());
+
+            //MainPage = new LoginPage();
+           MainPage = new NavigationPage(new LoginPage());
         }
 
         protected override void OnStart()

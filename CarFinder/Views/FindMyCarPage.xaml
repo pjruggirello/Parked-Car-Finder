@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps" x:Class="CarFinder.FindMyCarPage">
+    <ContentPage.Content>
+        <StackLayout x:Name="CarFinderMap">
+            <maps:Map x:Name="map" />
+            <Button Text="Home"
+                    BackgroundColor="#1E90FF"
+                    FontSize="20"
+                    Clicked="FindMyCarClicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -11,10 +11,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.5.0.530" />
+    <PackageReference Include="Xamarin.Forms" Version="4.5.0.617" />
     <PackageReference Include="Xamarin.Essentials" Version="1.5.2" />
     <PackageReference Include="Xam.Plugin.Geolocator" Version="4.5.0.6" />
-    <PackageReference Include="Xamarin.Forms.Maps" Version="4.5.0.530" />
+    <PackageReference Include="Xamarin.Forms.Maps" Version="4.5.0.617" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.6.292" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Models\MyFriendsEntryPage.xaml.cs" />
@@ -28,10 +29,6 @@
   <ItemGroup>
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Views\FindMyCarPage.xaml.cs">
       <DependentUpon>FindMyCarPage.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Views\MainPage.xaml.cs">
-      <DependentUpon>MainPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

@@ -3,10 +3,10 @@
     <ContentPage.Content>
         <StackLayout x:Name="CarFinderMap">
             <maps:Map x:Name="map" />
-            <Button Text="Home"
+            <Button Text="Set My Location"
                     BackgroundColor="#1E90FF"
                     FontSize="20"
-                    Clicked="FindMyCarClicked" />
+                    Clicked="SetMyLocationClicked" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

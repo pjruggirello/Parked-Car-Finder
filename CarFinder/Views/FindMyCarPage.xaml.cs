@@ -6,20 +6,33 @@ using Xamarin.Forms.Maps;
 
 namespace CarFinder
 {
+
     public partial class FindMyCarPage : ContentPage
     {
+
+
         public FindMyCarPage()
         {
+
             InitializeComponent();
-            SetLocation();
+            FindMyLocation();
         }
 
         private async void FindMyCarClicked(object sender, EventArgs e)
         {
             await Navigation.PopAsync();
         }
+        private async void SetMyLocationClicked(object sender, EventArgs e)
+        {
+            var location = await Geolocation.GetLastKnownLocationAsync();
+            var theMap = FindByName("map") as Xamarin.Forms.Maps.Map;
+            var mapCenter = new Position(location.Latitude, location.Longitude);
+            var pin = new Pin { Type = PinType.Generic, Position = mapCenter, Label = "MyCar" };
+            theMap.Pins.Add(pin);
 
-        private async void SetLocation()
+        }
+
+        private async void FindMyLocation()
         {
             try
             {
@@ -31,8 +44,8 @@ namespace CarFinder
 
                     var theMap = FindByName("map") as Xamarin.Forms.Maps.Map;
                     var mapCenter = new Position(location.Latitude, location.Longitude);
-                    var pin = new Pin { Type = PinType.Generic, Position = mapCenter, Label = "My Car" };
-                    theMap.Pins.Add(pin);
+                    //var pin = new Pin { Type = PinType.Generic, Position = mapCenter, Label = "My Car" };
+                    //theMap.Pins.Add(pin);
                     theMap.MoveToRegion(MapSpan.FromCenterAndRadius(mapCenter, Distance.FromMiles(1)));
 
                 }

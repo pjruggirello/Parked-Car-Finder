@@ -3,9 +3,9 @@
     <StackLayout Padding="40,0,40,0">
         <Image Source="carFinder.png" Aspect="AspectFit"></Image>
             <Label x:Name="Lbl_Username" Text="Username" TextColor="Black" FontSize="20"/>
-            <Entry x:Name="Entry_Username" Placeholder="Username" TextColor="Black"/>
+        <Entry x:Name="userNameEntry" ReturnType="Next" Placeholder="Username" TextColor="Black"/>
             <Label x:Name="Lbl_Password" Text="Password" TextColor="Black" FontSize="20"/>
-            <Entry x:Name="Entry_Password" Placeholder="Password" />
+        <Entry x:Name="passwordEntry" ReturnType="Next" Placeholder="Password" />
 
             <Button x:Name="Btn_Register" Text="Register" Clicked="RegisterClicked" TextColor="Black" BackgroundColor="#1E90FF"/>
             

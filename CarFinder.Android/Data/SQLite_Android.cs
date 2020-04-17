@@ -9,6 +9,7 @@ using Android.Widget;
 using System.IO;
 using CarFinder.Data;
 using CarFinder.Droid.Data;
+
 using Xamarin.Forms;
 
 [assembly: Dependency(typeof(SQLite_Android))]

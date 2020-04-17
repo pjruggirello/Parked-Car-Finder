@@ -2,6 +2,7 @@
 using CarFinder.Models;
 using SQLite;
 using Xamarin.Forms;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace CarFinder.Data
@@ -17,6 +18,24 @@ namespace CarFinder.Data
             database = DependencyService.Get<ISQLite>().GetConnection();
             database.CreateTable<User>();
         }
+
+
+        public string AddUser(User user)
+        {
+            var data = database.Table<User>();
+            var d1 = data.Where(x => x.password == user.password && x.userName == user.userName).FirstOrDefault();
+            if (d1 == null)
+            {
+                database.Insert(user);
+                return "Sucessfully Added";
+            }
+            else
+                return "Already Mail id Exist";
+
+
+        }
+
+
 
         public User GetUser()
         {
@@ -50,6 +69,22 @@ namespace CarFinder.Data
                 }
             }
         }
+
+
+        public bool LoginValidate(string userName1, string pwd1)
+        {
+            var data = database.Table<User>();
+            var d1 = data.Where(x => x.userName == userName1 && x.password == pwd1).FirstOrDefault();
+
+            if (d1 != null)
+            {
+                return true;
+            }
+            else
+                return false;
+        }
+
+
 
         public int DeleteUser(int id)
         {

@@ -1,40 +1,75 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
+using CarFinder.Data;
+using System.Diagnostics;
 using CarFinder.Models;
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace CarFinder.Views
 {
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class UserRegistration : ContentPage
     {
+
+        User users = new User();
+        UserDatabaseController userDB = new UserDatabaseController();
         public UserRegistration()
         {
             InitializeComponent();
+            NavigationPage.SetHasBackButton(this, false);
+            userNameEntry.ReturnCommand = new Command(() => passwordEntry.Focus());
+         
         }
-        private void RegisterClicked(object sender, EventArgs e)
+        private async void RegisterClicked(object sender, EventArgs e)
         {
-            var Usernameview = FindByName("Entry_Username") as Entry;
-            var Passwordview = FindByName("Entry_Password") as Entry;
 
-            User user = new User(Usernameview.Text, Passwordview.Text);
-            if (user.CheckInformation())
+
+            if ((string.IsNullOrWhiteSpace(userNameEntry.Text)) ||
+                (string.IsNullOrWhiteSpace(passwordEntry.Text)) ||
+                (string.IsNullOrEmpty(userNameEntry.Text)) ||
+                (string.IsNullOrEmpty(passwordEntry.Text)))
+
             {
-                //await DisplayAlert("Login", "Logged In!", "Ok");
-                Navigation.PushAsync(new LoginPage());
-                Navigation.RemovePage(this);
-
-                //TO ADD USER UPON COMPLETION OF IF STATEMENT USE THIS
-                //App.UserDatabase.SaveUser(user);
-
-                //TO REMOVE USER UPON COMPLETION OF STATEMENT IN IF STATEMENT US THIS
-                //App.UserDatabase.DeleteUser(user);
-
+                await DisplayAlert("Enter Data", "Enter Valid Data", "OK");
             }
+
+
+
+
             else
             {
-                DisplayAlert("Invalid Username or Password.", "The Username or password you entered did not meet the specified criteria.", "Please try again." );
-            }
 
+                users.userName = userNameEntry.Text;
+                users.password = passwordEntry.Text;
+
+                try
+                {
+                    var retrunvalue = userDB.AddUser(users);
+                    if (retrunvalue == "Sucessfully Added")
+                    {
+                        await DisplayAlert("User Add", retrunvalue, "OK");
+                        await Navigation.PushAsync(new LoginPage());
+                    }
+                    else
+                    {
+                        await DisplayAlert("User Add", retrunvalue, "OK");
+                        
+
+                        userNameEntry.Text = string.Empty;
+                        passwordEntry.Text = string.Empty;
+
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine(ex);
+                }
+
+                Navigation.PushAsync(new LoginPage());
+               
+             }
         }
     }
 

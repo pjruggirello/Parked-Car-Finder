@@ -9,21 +9,21 @@ namespace CarFinder.Models
 {
     public class User
     {
-        [PrimaryKey]
+        [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
-        public string Username { get; set; }
-        public string Password { get; set; }
+        public string userName { get; set; }
+        public string password { get; set; }
 
         public User() { }
-        public User(string Username, string Password)
+        public User(string userName, string password)
         {
-            this.Username = Username;
-            this.Password = Password;
+            this.userName = userName;
+            this.password = password;
         }
 
         public bool CheckInformation()
         {
-            if(!this.Username.Equals("") && !this.Password.Equals(""))
+            if(!this.userName.Equals("") && !this.password.Equals(""))
                 return true;
             else
                 return false;

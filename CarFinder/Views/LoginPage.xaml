@@ -8,7 +8,7 @@
             <Entry x:Name="passwordEntry" Placeholder="Password" />
             <Button x:Name="Btn_Signin" Text="Sign in" Clicked="SignInClicked" TextColor="Black" BackgroundColor="#1E90FF"/>
 
-        <Label Text="No Account?" HorizontalOptions="Center" FontSize="20"/>
+        
         <Button Text="Create Account" Clicked="CreateAccountClicked" TextColor="Black" BackgroundColor="#1E90FF" />
    </StackLayout>
 </ContentPage>

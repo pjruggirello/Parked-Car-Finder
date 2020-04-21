@@ -30,7 +30,7 @@ namespace CarFinder.Data
                 return "Sucessfully Added";
             }
             else
-                return "Already Mail id Exist";
+                return "USer Exist";
 
 
         }

@@ -10,7 +10,7 @@ namespace CarFinder
 {
     public partial class App : Application
     {
-        static TokenDatabaseController tokenDatabase;
+    
         static UserDatabaseController userDatabase;
 
         public App()
@@ -18,7 +18,7 @@ namespace CarFinder
 
             InitializeComponent();
 
-            //MainPage = new LoginPage();
+           
            MainPage = new NavigationPage(new LoginPage());
         }
 
@@ -46,16 +46,6 @@ namespace CarFinder
             }
         }
 
-        public static TokenDatabaseController TokenDatabase
-        {
-            get
-            {
-                if (tokenDatabase == null)
-                {
-                    tokenDatabase = new TokenDatabaseController();
-                }
-                return tokenDatabase;
-            }
-        }
+
     }
 }

@@ -3,12 +3,17 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="CarFinder.Views.UserRegistration">
     <StackLayout Padding="40,0,40,0">
+
+        <!-- Creates the CarFinder logo -->
         <Image Source="carFinder.png" Aspect="AspectFit"></Image>
+
+        <!-- Creates the fields on the user registration page where the user can setup a username and password combination -->
             <Label x:Name="Lbl_Username" Text="Username" TextColor="Black" FontSize="20"/>
         <Entry x:Name="userNameEntry" ReturnType="Next" Placeholder="Username" TextColor="Black"/>
             <Label x:Name="Lbl_Password" Text="Password" TextColor="Black" FontSize="20"/>
         <Entry x:Name="passwordEntry" ReturnType="Next" Placeholder="Password" />
 
+            <!-- Creates the button that the user taps to submit their new user info -->
             <Button x:Name="Btn_Register" Text="Register" Clicked="RegisterClicked" TextColor="Black" BackgroundColor="#1E90FF"/>
             
     </StackLayout>

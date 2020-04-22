@@ -13,8 +13,9 @@ namespace CarFinder
 
         public FindMyCarPage()
         {
-
+            // Starts the page
             InitializeComponent();
+            // This is the function that creates the map
             FindMyLocation();
         }
 
@@ -24,6 +25,7 @@ namespace CarFinder
         }
         private async void SetMyLocationClicked(object sender, EventArgs e)
         {
+            // This method adds a pin at the users location that says MyCar
             var location = await Geolocation.GetLastKnownLocationAsync();
             var theMap = FindByName("map") as Xamarin.Forms.Maps.Map;
             var mapCenter = new Position(location.Latitude, location.Longitude);
@@ -36,16 +38,16 @@ namespace CarFinder
         {
             try
             {
+                // Finds and stores the users current location
                 var location = await Geolocation.GetLastKnownLocationAsync();
 
                 if (location != null)
                 {
+                    // Takes the users stores location and sets it at the center of the map
                     Console.WriteLine($"Latitude: {location.Latitude}, Longitude: {location.Longitude}, Altitude: {location.Altitude}");
 
                     var theMap = FindByName("map") as Xamarin.Forms.Maps.Map;
                     var mapCenter = new Position(location.Latitude, location.Longitude);
-                    //var pin = new Pin { Type = PinType.Generic, Position = mapCenter, Label = "My Car" };
-                    //theMap.Pins.Add(pin);
                     theMap.MoveToRegion(MapSpan.FromCenterAndRadius(mapCenter, Distance.FromMiles(1)));
 
                 }

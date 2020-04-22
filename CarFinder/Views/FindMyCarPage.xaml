@@ -2,7 +2,11 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps" x:Class="CarFinder.FindMyCarPage">
     <ContentPage.Content>
         <StackLayout x:Name="CarFinderMap">
+
+            <!-- Creates the Map -->
             <maps:Map x:Name="map" />
+
+            <!-- Creates the button used to set the location of the users car -->
             <Button Text="Set My Location"
                     BackgroundColor="#1E90FF"
                     FontSize="20"

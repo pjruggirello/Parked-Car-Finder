@@ -16,16 +16,13 @@ namespace CarFinder.Views
         UserDatabaseController userDB = new UserDatabaseController();
         public LoginPage()
         {
+
             InitializeComponent();
             NavigationPage.SetHasBackButton(this, false);
             userNameEntry.ReturnCommand = new Command(() => passwordEntry.Focus());
         }
 
-
-
-
-
-
+        // Upon correct credential submission this page links to the MyCarPage
         public async void SignInClicked(object sender, EventArgs e)
         {
 
@@ -53,6 +50,7 @@ namespace CarFinder.Views
           
 
         }
+        // Links this page to the User Registration page
         private async void CreateAccountClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new UserRegistration());

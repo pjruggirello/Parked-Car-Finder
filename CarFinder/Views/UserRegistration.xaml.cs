@@ -22,6 +22,7 @@ namespace CarFinder.Views
             userNameEntry.ReturnCommand = new Command(() => passwordEntry.Focus());
          
         }
+        // this method is responsible for registering the new username password combination to allow it access to the app
         private async void RegisterClicked(object sender, EventArgs e)
         {
 

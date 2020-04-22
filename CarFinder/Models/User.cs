@@ -7,6 +7,7 @@ using SQLite;
 
 namespace CarFinder.Models
 {
+    //Creates the Table User
     public class User
     {
         [PrimaryKey, AutoIncrement]
@@ -21,6 +22,7 @@ namespace CarFinder.Models
             this.password = password;
         }
 
+        //Validates username and login infromation 
         public bool CheckInformation()
         {
             if(!this.userName.Equals("") && !this.password.Equals(""))

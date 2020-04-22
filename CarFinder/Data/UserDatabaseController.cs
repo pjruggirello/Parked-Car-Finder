@@ -15,11 +15,12 @@ namespace CarFinder.Data
 
         public UserDatabaseController()
         {
+            //passes in table from database to be populated
             database = DependencyService.Get<ISQLite>().GetConnection();
             database.CreateTable<User>();
         }
 
-
+        //method to Add a user to Database
         public string AddUser(User user)
         {
             var data = database.Table<User>();
@@ -36,7 +37,7 @@ namespace CarFinder.Data
         }
 
 
-
+        //gets user from database to loaded
         public User GetUser()
         {
             lock (locker)
@@ -53,6 +54,7 @@ namespace CarFinder.Data
            
         }
 
+        //Saves information for user 
         public int SaveUser(User user)
         {
             lock (locker)
@@ -70,7 +72,7 @@ namespace CarFinder.Data
             }
         }
 
-
+        //method to validate login information
         public bool LoginValidate(string userName1, string pwd1)
         {
             var data = database.Table<User>();
@@ -86,11 +88,6 @@ namespace CarFinder.Data
 
 
 
-        public int DeleteUser(int id)
-        {
-            lock (locker) {
-                return database.Delete<User>(id);
-            }
-        }
+       
     }
 }
